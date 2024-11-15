@@ -3,14 +3,21 @@
  **/
 
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <bits/stdc++.h>
 
-#define ll long long
-#define ull unsigned long long
-#define lf double
-#define vc vector<char>
-#define vll vector<long long>
-#define vvll vector<vector<long long>>
+typedef long long ll;
+typedef unsigned long long ull;
+typedef double lf;
+typedef pair<long long,long long> pll2;
+typedef vector<char> vc;
+typedef vector<long long> vll;
+typedef vector<vector<long long>> vvll;
+typedef vector<pair<long long,long long>> vpll2;
+
+const int inf=0x3f3f3f3f;
+const int mod=998244353;
+const int MOD=1000000009;
 
 using namespace std;
 

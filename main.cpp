@@ -13,13 +13,13 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef double lf;
 typedef pair<long long,long long> pll2;
+typedef priority_queue<ll> pqll;
 typedef vector<char> vc;
 typedef vector<long long> vll;
 typedef vector<vector<long long>> vvll;
 typedef vector<pair<long long,long long>> vpll2;
 
 const int intinf=0x3f3f3f3f;
-const int llinf=0x3f3f3f3f3f3f3f3f;
 const int mod9=998244353;
 const int moda=1000000007;
 

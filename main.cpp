@@ -4,7 +4,9 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <bits/stdc++.h>
+
 using namespace std;
+// using namespace interactive;
 
 #define st first
 #define nd second
@@ -12,17 +14,25 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef double lf;
-typedef pair<long long,long long> pll2;
+typedef pair<ll, ll> pll2;
 typedef priority_queue<ll> pqll;
 typedef vector<char> vc;
-typedef vector<long long> vll;
-typedef vector<vector<long long>> vvll;
-typedef vector<pair<long long,long long>> vpll2;
+typedef vector<ll> vll;
+typedef vector<vector<ll>> vvll;
+typedef vector<pair<ll, ll>> vpll2;
 
-const int intinf=0x3f3f3f3f;
-const int mod9=998244353;
-const int moda=1000000007;
+const int intinf = 0x3f3f3f3f;
+const int mod9 = 998244353;
+const int moda = 1000000007;
 
+namespace interactive
+{
+void ask(ll a);
+void ask(ll a, ll b);
+void ans(ll a);
+void ans(string s);
+void ans(vll a);
+}
 void solve(void);
 
 int main(void)
@@ -38,8 +48,9 @@ int main(void)
 void solve(void)
 {
     ll i = 0, j = 0;
-    ll n, m, sum = 0, ans = 0;
-    
+    ll n = 0, m = 0;
+    ll sum = 0;
+
     // cin>>n;
     // vll a(n);
     // for(i=0;i<n;i++) cin>>a[i];
@@ -51,3 +62,41 @@ void solve(void)
 /*
 
 */
+
+void interactive::ask(ll a)
+{
+    cout << "? " << a << endl;
+    cout.flush();
+    return;
+}
+
+void interactive::ask(ll a, ll b)
+{
+    cout << "? " << a << ' ' << b << endl;
+    cout.flush();
+    return;
+}
+
+void interactive::ans(ll a)
+{
+    cout << "! " << a << endl;
+    cout.flush();
+    return;
+}
+
+void interactive::ans(string s)
+{
+    cout << "! " << s << endl;
+    cout.flush();
+    return;
+}
+
+void interactive::ans(vll a)
+{
+    cout << "!";
+    for (auto ii = a.begin(); ii != a.end(); ii++)
+        cout << ' ' << (*ii);
+    cout << endl;
+    cout.flush();
+    return;
+}

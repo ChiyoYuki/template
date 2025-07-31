@@ -1,40 +1,32 @@
-struct DSU {
-    vector<int> f, siz;
-    
-    DSU() {}
-    DSU(int n) {
-        init(n);
+class DSU {
+public:
+  long long dnum,num;
+  std::vector<long long> fa;
+  DSU(long long n)
+  {
+    fa.resize(n);
+    dnum=n;
+    num=n;
+  }
+  bool merge(long long x,long long y)
+  {
+    x=find(x);
+    y=find(y);
+    if(x==y) return false;
+    fa[y]=x;
+    dnum--;
+  }
+  long long find(long long x)
+  {
+    if(x==fa[x]) return x;
+    else
+    {
+      fa[x]=find(fa[x]);
+      return fa[x];
     }
-    
-    void init(int n) {
-        f.resize(n);
-        iota(f.begin(), f.end(), 0);
-        siz.assign(n, 1);
-    }
-    
-    int find(int x) {
-        while (x != f[x]) {
-            x = f[x] = f[f[x]];
-        }
-        return x;
-    }
-    
-    bool same(int x, int y) {
-        return find(x) == find(y);
-    }
-    
-    bool merge(int x, int y) {
-        x = find(x);
-        y = find(y);
-        if (x == y) {
-            return false;
-        }
-        siz[x] += siz[y];
-        f[y] = x;
-        return true;
-    }
-    
-    int size(int x) {
-        return siz[find(x)];
-    }
+  }
+  bool same(long long x,long long y)
+  {
+    return find(x)==find(y);
+  }
 };

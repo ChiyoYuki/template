@@ -8,8 +8,7 @@ public:
     this->right=NULL;
     this->father=NULL;
   }
-  ~tnode()
-  {
+  ~tnode() {
     if(this->left!=NULL) delete this->left;
     if(this->right!=NULL) delete this->right;
   }
